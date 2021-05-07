@@ -1,0 +1,42 @@
+.temperature {
+  font-size: 75px;
+}
+h1 {
+  font-family: PT Mono;
+  font-size: 50px;
+  padding-top: 20px;
+}
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 26px;
+}
+h2 {
+  font-size: 150px;
+}
+.units {
+  font-size: 26px;
+}
+h3 {
+  margin: 10px 10px 25px 250px;
+}
+.sun-icon-current {
+  color: yellow;
+  font-size: 100px;
+  padding-top: 20px;
+}
+.sun-icon {
+  color: yellow;
+  font-size: 40px;
+}
+.rain-icon {
+  color: royalblue;
+  font-size: 40px;
+}
+.coud-icon {
+  color: grey;
+  font-size: 40px;
+}
+.cloud-sun-icon {
+  color: lightskyblue;
+  font-size: 40px;
+}
