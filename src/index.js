@@ -75,11 +75,11 @@ function currentLocation(event) {
 let currentWeather = document.querySelector("#current-location-button");
 currentWeather.addEventListener("click", currentLocation);
 
-//function changeToFarenheit(event) {
-//event.preventDefault();
-//let currentFarenheitTime = document.querySelector("#temperature");
-//currentFarenheitTime.innerHTML = "32";
-//}
+function changeToFarenheit(event) {
+  event.preventDefault();
+  let currentFarenheitTime = document.querySelector("#temperature");
+  currentFarenheitTime.innerHTML = "32";
+}
 
 //function changeToCelcius(event) {
 //event.preventDefault();
