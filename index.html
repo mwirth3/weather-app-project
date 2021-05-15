@@ -26,115 +26,122 @@
   </head>
   <body>
     <div class="container">
-      <div class="card" style="border-radius: 4px">
-        <div class="card-body">
-          <form id="search-form">
-            <div class="row">
-              <div class="col-6">
-                <input
-                  type="search"
-                  placeholder="Find your city..."
-                  autofocus="on"
-                  autocomplete="off"
-                  id="city-input"
-                  class="form-control shadow-sm"
-                />
-              </div>
-              <div class="col-2">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-primary shadow-sm"
-                />
-              </div>
-              <div class="col-2">
-                <button class="btn btn-secondary" id="current-location-button">
-                  Current
-                </button>
-              </div>
-            </div>
-          </form>
-          <h1>Phoenix</h1>
-          <ul id="current-date-weather" style="padding: 0">
-            <li id="date"></li>
-            <li>Warm and Sunny</li>
-          </ul>
-          <div class="row align-items-start">
-            <div class="col flex current-temp">
-              <span class="temperature" id="temperature"> 89 </span>
-              <span class="units" id="units">
-                <a href="#" id="celsius-link">°C</a> |
-                <a href="#" id="fahrenheit-link">°F</a>
-              </span>
-            </div>
-            <div class="col align-self-center">
-              <h2><i class="fas fa-sun sun-icon-current"></i></h2>
-            </div>
-            <div class="col">
+      <div class="weather-app-wrapper">
+        <div class="card" style="border-radius: 4px">
+          <div class="card-body">
+            <form id="search-form">
               <div class="row">
-                <div class="col">
-                  <ul>
-                    <li>Precipitation: 0%</li>
-                    <li>Humidity: 5%</li>
-                    <li>Wind: 5 km/h</li>
-                  </ul>
+                <div class="col-6">
+                  <input
+                    type="search"
+                    placeholder="Find your city..."
+                    autofocus="on"
+                    autocomplete="off"
+                    id="city-input"
+                    class="form-control shadow-sm"
+                  />
+                </div>
+                <div class="col-2">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="form-control btn btn-primary shadow-sm"
+                  />
+                </div>
+                <div class="col-2">
+                  <button
+                    class="btn btn-secondary"
+                    id="current-location-button"
+                  >
+                    Current
+                  </button>
+                </div>
+              </div>
+            </form>
+            <h1>Phoenix</h1>
+            <div class="current-date-weather">
+              <ul style="padding: 0">
+                <li id="date"></li>
+                <li>Warm and Sunny</li>
+              </ul>
+            </div>
+            <div class="row align-items-start">
+              <div class="col-4 flex current-temp">
+                <span class="temperature" id="temperature"> 89 </span>
+                <span class="units" id="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+              <div class="col-3 align-self-center">
+                <h2><i class="fas fa-sun sun-icon-current"></i></h2>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <div class="col">
+                    <ul>
+                      <li>Precipitation: 0%</li>
+                      <li>Humidity: 5%</li>
+                      <li>Wind: 5 km/h</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--<h3 class="border p-2" style="width: 300px">Warm and sunny</h3>-->
+            <div class="row">
+              <div class="col text-center">Mon</div>
+              <div class="col text-center">Tues</div>
+              <div class="col text-center">Wed</div>
+              <div class="col text-center">Thurs</div>
+              <div class="col text-center">Fri</div>
+            </div>
+            <div class="row">
+              <div class="card col text-center" style="border-radius: 25px">
+                <div class="card-body">
+                  <i class="fas fa-cloud-rain rain-icon"></i>
+                  <br />
+                  82°
+                </div>
+              </div>
+              <div class="card col text-center" style="border-radius: 25px">
+                <div class="card-body">
+                  <i class="fas fa-cloud coud-icon"></i>
+                  <br />
+                  85°
+                </div>
+              </div>
+              <div class="card col text-center" style="border-radius: 25px">
+                <div class="card-body">
+                  <i class="fas fa-cloud-sun cloud-sun-icon"></i>
+                  <br />
+                  88°
+                </div>
+              </div>
+              <div class="card col text-center" style="border-radius: 25px">
+                <div class="card-body">
+                  <i class="fas fa-sun sun-icon"></i>
+                  <br />
+                  92°
+                </div>
+              </div>
+              <div class="card col text-center" style="border-radius: 25px">
+                <div class="card-body">
+                  <i class="fas fa-sun sun-icon"></i>
+                  <br />
+                  91°
                 </div>
               </div>
             </div>
           </div>
-          <!--<h3 class="border p-2" style="width: 300px">Warm and sunny</h3>-->
-          <div class="row">
-            <div class="col text-center">Mon</div>
-            <div class="col text-center">Tues</div>
-            <div class="col text-center">Wed</div>
-            <div class="col text-center">Thurs</div>
-            <div class="col text-center">Fri</div>
-          </div>
-          <div class="row">
-            <div class="card col text-center" style="border-radius: 25px">
-              <div class="card-body">
-                <i class="fas fa-cloud-rain rain-icon"></i>
-                <br />
-                82°
-              </div>
-            </div>
-            <div class="card col text-center" style="border-radius: 25px">
-              <div class="card-body">
-                <i class="fas fa-cloud coud-icon"></i>
-                <br />
-                85°
-              </div>
-            </div>
-            <div class="card col text-center" style="border-radius: 25px">
-              <div class="card-body">
-                <i class="fas fa-cloud-sun cloud-sun-icon"></i>
-                <br />
-                88°
-              </div>
-            </div>
-            <div class="card col text-center" style="border-radius: 25px">
-              <div class="card-body">
-                <i class="fas fa-sun sun-icon"></i>
-                <br />
-                92°
-              </div>
-            </div>
-            <div class="card col text-center" style="border-radius: 25px">
-              <div class="card-body">
-                <i class="fas fa-sun sun-icon"></i>
-                <br />
-                91°
-              </div>
-            </div>
-          </div>
         </div>
+        <a
+          href="https://github.com/mwirth3/weather-app-project"
+          class="source-code"
+          >open-source code</a
+        >
+        by Mary Wirth
       </div>
-      <a
-        href="https://github.com/mwirth3/weather-app-project"
-        class="source-code"
-        >open-source code</a
-      >
-      by Mary Wirth
     </div>
     <script src="src/index.js"></script>
   </body>

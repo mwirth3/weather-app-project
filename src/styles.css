@@ -1,18 +1,15 @@
-.weather-app {
-  max-width: 600px;
-  margin: auto;
-}
 .card {
   margin-top: 20px;
 }
 .temperature {
   font-size: 75px;
   line-height: 0.7;
+  margin-right: -17px;
 }
 h1 {
   font-family: PT Mono;
   font-size: 50px;
-  padding-top: 20px;
+  padding: 20px 0px 0px 20px;
 }
 ul {
   list-style-type: none;
@@ -24,7 +21,7 @@ h2 {
   font-size: 150px;
 }
 .units {
-  font-size: 15px;
+  font-size: 18px;
   vertical-align: top;
 }
 h3 {
@@ -32,7 +29,7 @@ h3 {
 }
 .sun-icon-current {
   color: yellow;
-  font-size: 75px;
+  font-size: 95px;
   display: block;
 }
 .sun-icon {
@@ -53,4 +50,11 @@ h3 {
 }
 .source-code {
   text-decoration: none;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+.current-date-weather {
+  padding-bottom: 20px;
 }
