@@ -58,11 +58,16 @@
         </div>
       </form>
       <h1>Phoenix</h1>
-      <p id="date"></p>
-      <div class="row">
+      <p>
+        <ul id="current-date-weather">
+          <li id="date"></li>
+          <li>Warm and Sunny</li>
+        </ul>
+      </p>
+      <div class="row align-items-start">
         <div class="col flex current-temp">
           <span class="temperature" id="temperature"> 89 </span>
-          <span class="units">
+          <span class="units" id="units">
             <a href="#" id="celsius-link">°C</a> |
             <a href="#" id="fahrenheit-link">°F</a>
           </span>
