@@ -1,5 +1,6 @@
 .temperature {
-  font-size: 65px;
+  font-size: 75px;
+  line-height: 0.7;
 }
 h1 {
   font-family: PT Mono;
@@ -17,6 +18,7 @@ h2 {
 }
 .units {
   font-size: 15px;
+  vertical-align: top;
 }
 h3 {
   margin: 10px 10px 25px 250px;
