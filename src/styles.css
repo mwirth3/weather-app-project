@@ -1,3 +1,6 @@
+.card {
+  margin-top: 20px;
+}
 .temperature {
   font-size: 75px;
   line-height: 0.7;
