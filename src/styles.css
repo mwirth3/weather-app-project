@@ -2,9 +2,9 @@
   margin-top: 20px;
 }
 .temperature {
-  font-size: 75px;
+  font-size: 70px;
   line-height: 0.7;
-  margin-right: -17px;
+  margin-right: -5px;
 }
 h1 {
   font-family: PT Mono;
@@ -57,4 +57,5 @@ h3 {
 }
 .current-date-weather {
   padding-bottom: 20px;
+  text-transform: capitalize;
 }
