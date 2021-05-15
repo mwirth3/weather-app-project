@@ -1,3 +1,7 @@
+.weather-app {
+  max-width: 600px;
+  margin: auto;
+}
 .card {
   margin-top: 20px;
 }
@@ -29,7 +33,7 @@ h3 {
 .sun-icon-current {
   color: yellow;
   font-size: 75px;
-  padding-top: 20px;
+  display: block;
 }
 .sun-icon {
   color: yellow;
