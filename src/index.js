@@ -10,30 +10,29 @@ function searchCity(event) {
   console.log(cityInput.value);
   search(cityInput.value);
 }
-//current date and time
-let currentTime = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[currentTime.getDay()];
-let hours = currentTime.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+//Date
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if ((hours, 10)) {
+    hours = `${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-let minutes = currentTime.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-let dateParagraph = document.querySelector("#date");
-dateParagraph.innerHTML = `${day} ${hours}:${minutes}`;
-
 //Show Temperature
 function showTemperature(response) {
   console.log("hello5");
@@ -43,11 +42,12 @@ function showTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  let precipitationElement = document.querySelector("#precipitation");
+  let dateElement = document.querySelector("#date");
   temperatureElement.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = response.data.wind.speed;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
 }

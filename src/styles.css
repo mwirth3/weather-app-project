@@ -57,5 +57,7 @@ h3 {
 }
 .current-date-weather {
   padding-bottom: 20px;
+}
+li:first-letter {
   text-transform: capitalize;
 }
