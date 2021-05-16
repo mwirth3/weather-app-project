@@ -2,7 +2,6 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 function searchCity(event) {
-  console.log("hello3");
   event.preventDefault();
   //let cityElement = document.querySelector("#city");
   let cityInput = document.querySelector("#city-input");
@@ -35,14 +34,13 @@ function formatDate(timestamp) {
 }
 //Show Temperature
 function showTemperature(response) {
-  console.log("hello5");
-  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+
   temperatureElement.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -57,13 +55,12 @@ function search(city) {
   let apiKey = "fb3f02066dc4554787dc8a98a58a3e46";
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  console.log("hello2");
+
   axios.get(`${apiUrl}`).then(showTemperature);
 }
 //current location
 
 function getCurrentLocation(position) {
-  console.log(position.coords.latitude);
   let apiKey = "fb3f02066dc4554787dc8a98a58a3e46";
 
   let units = "imperial";
@@ -74,7 +71,6 @@ function getCurrentLocation(position) {
 }
 
 function currentLocation(event) {
-  console.log("Hello7");
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(getCurrentLocation);
 }
