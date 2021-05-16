@@ -5,6 +5,7 @@
   font-size: 70px;
   line-height: 0.7;
   margin-right: -5px;
+  float: inline-start;
 }
 h1 {
   font-family: PT Mono;
@@ -16,9 +17,14 @@ ul {
   padding-left: 0;
   margin-left: 0;
 }
-
-h2 {
-  font-size: 150px;
+.icon-location {
+  padding: 0;
+  margin-left: -10px;
+}
+.icon-location img {
+  width: 100px;
+  height: 100px;
+  object-position: left top;
 }
 .units {
   font-size: 18px;
@@ -27,11 +33,7 @@ h2 {
 h3 {
   margin: 10px 10px 25px 250px;
 }
-img {
-  color: yellow;
-  font-size: 20px
-  display: block;
-}
+
 .sun-icon {
   color: yellow;
   font-size: 40px;
