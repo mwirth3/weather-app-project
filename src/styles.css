@@ -27,9 +27,9 @@ h2 {
 h3 {
   margin: 10px 10px 25px 250px;
 }
-.sun-icon-current {
+img {
   color: yellow;
-  font-size: 95px;
+  font-size: 20px
   display: block;
 }
 .sun-icon {
