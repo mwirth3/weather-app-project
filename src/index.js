@@ -1,6 +1,3 @@
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchCity);
-
 function search(city) {
   let apiKey = "fb3f02066dc4554787dc8a98a58a3e46";
   let units = "imperial";
@@ -72,7 +69,6 @@ function getCurrentLocation(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-search("Phoenix");
 function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(getCurrentLocation);
@@ -84,6 +80,8 @@ currentWeather.addEventListener("click", currentLocation);
 function showCelciusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celciusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
   let celciusTemperature = ((farenheitTemperature - 32) * 5) / 9;
 
   temperatureElement.innerHTML = Math.round(celciusTemperature);
@@ -92,15 +90,22 @@ function showCelciusTemp(event) {
 function showFarenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = farenheitTemperature;
+  farenheitLink.classList.add("active");
+  celciusLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 let farenheitTemperature = null;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
 
 let celciusLink = document.querySelector("#celsius-link");
 celciusLink.addEventListener("click", showCelciusTemp);
 
-let farenheitLink = document.querySelector("#farenheit-link");
+let farenheitLink = document.querySelector("#fahrenheit-link");
 farenheitLink.addEventListener("click", showFarenheitTemp);
+
+search("Phoenix");
 //function changeToFarenheit(event) {
 //event.preventDefault();
 // let currentFarenheitTime = document.querySelector("#temperature");

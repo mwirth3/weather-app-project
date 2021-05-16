@@ -63,3 +63,16 @@ h3 {
 li:first-letter {
   text-transform: capitalize;
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.current-temp .active {
+  color: black;
+  cursor: default;
+}
+.current-temp .active:hover {
+  text-decoration: none;
+}
