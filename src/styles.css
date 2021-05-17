@@ -22,8 +22,9 @@ ul {
   font-size: 18px;
   vertical-align: top;
 }
-h3 {
-  margin: 10px 10px 25px 250px;
+img {
+  position: absolute;
+  top: 200px;
 }
 
 .sun-icon {
@@ -60,6 +61,9 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+.current-temp {
+  padding-bottom: 20px;
 }
 .current-temp .active {
   color: black;
