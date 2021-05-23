@@ -84,7 +84,6 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "fb3f02066dc4554787dc8a98a58a3e46";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -135,48 +134,7 @@ function currentLocation(event) {
 let currentWeather = document.querySelector("#current-location-button");
 currentWeather.addEventListener("click", currentLocation);
 
-function showCelciusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celciusLink.classList.add("active");
-  farenheitLink.classList.remove("active");
-  let celciusTemperature = ((farenheitTemperature - 32) * 5) / 9;
-
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
-function showFarenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  farenheitLink.classList.add("active");
-  celciusLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-let farenheitTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
-let celciusLink = document.querySelector("#celsius-link");
-celciusLink.addEventListener("click", showCelciusTemp);
-
-let farenheitLink = document.querySelector("#fahrenheit-link");
-farenheitLink.addEventListener("click", showFarenheitTemp);
-
 search("Phoenix");
-
-//function changeToFarenheit(event) {
-//event.preventDefault();
-// let currentFarenheitTime = document.querySelector("#temperature");
-//currentFarenheitTime.innerHTML = "32";
-//}
-
-//function changeToCelcius(event) {
-//event.preventDefault();
-//let currentCelciusTime = document.querySelector("#temperature");
-//currentCelciusTime.innerHTML = "89";
-//}
-//let farenheit = document.querySelector("#celsius-link");
-//farenheit.addEventListener("click", changeToFarenheit);
-//let celcius = document.querySelector("#fahrenheit-link");
-//celcius.addEventListener("click", changeToCelcius);

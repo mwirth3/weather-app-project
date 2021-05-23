@@ -19,27 +19,11 @@ ul {
   font-size: 18px;
   vertical-align: top;
 }
-img {
+img.current-icon {
   position: absolute;
   top: 200px;
 }
 
-.sun-icon {
-  color: yellow;
-  font-size: 40px;
-}
-.rain-icon {
-  color: royalblue;
-  font-size: 40px;
-}
-.coud-icon {
-  color: grey;
-  font-size: 40px;
-}
-.cloud-sun-icon {
-  color: lightskyblue;
-  font-size: 40px;
-}
 .source-code {
   text-decoration: none;
 }
