@@ -33,7 +33,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 //Weather-forecast
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
@@ -60,8 +61,15 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
+//Get Forecast
+function getForecast(coordinates) {
+  let apiKey = "fb3f02066dc4554787dc8a98a58a3e46";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 //Show Temperature
 function showTemperature(response) {
   let h1 = document.querySelector("h1");
@@ -85,6 +93,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentIconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 //current location
@@ -136,7 +146,7 @@ let farenheitLink = document.querySelector("#fahrenheit-link");
 farenheitLink.addEventListener("click", showFarenheitTemp);
 
 search("Phoenix");
-displayForecast();
+
 //function changeToFarenheit(event) {
 //event.preventDefault();
 // let currentFarenheitTime = document.querySelector("#temperature");
