@@ -32,6 +32,36 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+//Weather-forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+
+  let forecastHTML = `<div class="row row-cols-1 row-cols-md-5 g-5">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+         <div class="col" style="border-radius: 30px">
+                <div class="card">
+                  <div class="card-body">
+                  <div class="weather-forecast-date">${day}</div>
+                    <img src="" />
+                    <div class="weather-forecast-temps">
+                      <span class="weather-forecast-temps-max">82°</span>
+                      <span class="weather-forecast-temps-min">72°</span>
+                    </div>
+                  </div>
+                </div>
+          </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
 //Show Temperature
 function showTemperature(response) {
   let h1 = document.querySelector("h1");
@@ -106,6 +136,7 @@ let farenheitLink = document.querySelector("#fahrenheit-link");
 farenheitLink.addEventListener("click", showFarenheitTemp);
 
 search("Phoenix");
+displayForecast();
 //function changeToFarenheit(event) {
 //event.preventDefault();
 // let currentFarenheitTime = document.querySelector("#temperature");

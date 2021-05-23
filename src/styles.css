@@ -1,6 +1,3 @@
-.card {
-  margin-top: 20px;
-}
 .temperature {
   font-size: 70px;
   line-height: 0.7;
@@ -63,7 +60,6 @@ a:hover {
   text-decoration: underline;
 }
 .current-temp {
-  padding-bottom: 20px;
 }
 .current-temp .active {
   color: black;
@@ -71,4 +67,15 @@ a:hover {
 }
 .current-temp .active:hover {
   text-decoration: none;
+}
+.weather-forecast {
+  padding: 20px;
+
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 16px;
+}
+.weather-forecast-temps {
+  font-size: 12px;
 }
