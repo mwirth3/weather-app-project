@@ -24,34 +24,13 @@ img.current-icon {
   top: 200px;
 }
 
-.source-code {
-  text-decoration: none;
-}
-.weather-app-wrapper {
-  max-width: 600px;
-  margin: auto;
-}
 .current-date-weather {
   padding-bottom: 20px;
 }
 li:first-letter {
   text-transform: capitalize;
 }
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.current-temp {
-}
-.current-temp .active {
-  color: black;
-  cursor: default;
-}
-.current-temp .active:hover {
-  text-decoration: none;
-}
+
 .weather-forecast {
   padding: 20px;
 
@@ -62,4 +41,11 @@ a:hover {
 }
 .weather-forecast-temps {
   font-size: 12px;
+}
+.source-code {
+  text-decoration: none;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: auto;
 }
