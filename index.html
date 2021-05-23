@@ -57,6 +57,7 @@
                 </div>
               </div>
             </form>
+
             <h1>Phoenix</h1>
             <div class="current-date-weather">
               <ul style="padding: 0">
@@ -65,40 +66,33 @@
               </ul>
             </div>
             <div class="row">
-              <div class="col-8">
+              <div class="col-auto me-auto">
                 <div class="clearfix current-temp">
                   <span class="temperature" id="temperature"> 89 </span>
-                  <span class="units" id="units">
-                    °F</a> |
-                   
-                  </span>
-                  <img
-                    src=""
-                    id="current-icon"
-                    alt="weather picture"
-                    class="float-left"
-                  />
+                  <span class="units" id="units">°F</span>
+
+                  <img src="" id="current-icon" alt="weather picture" />
                 </div>
               </div>
-              <div class="col-4">
+
+              <div class="col-auto">
                 <ul>
                   <li>Humidity: <span id="humidity"></span>%</li>
                   <li>Wind: <span id="wind"></span> m/h</li>
                 </ul>
               </div>
             </div>
-            </div>
-            <div class="weather-forecast" id="forecast"></div>
           </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small><a
-          href="https://github.com/mwirth3/weather-app-project"
-          class="source-code"
-          >open-source code</a
-        >
-        by Mary Wirth
+        <small
+          ><a
+            href="https://github.com/mwirth3/weather-app-project"
+            class="source-code"
+            >open-source code</a
+          >
+          by Mary Wirth
         </small>
-  
       </div>
     </div>
     <script src="src/index.js"></script>
